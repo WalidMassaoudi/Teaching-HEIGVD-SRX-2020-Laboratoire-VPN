@@ -240,7 +240,7 @@ Vous pouvez consulter l’état de votre configuration IKE avec les commandes su
 
 ---
 
-**Réponse :**  
+**Réponse :**  ![capture4](images/IKE-policy.png)
 
 ---
 
@@ -249,7 +249,7 @@ Vous pouvez consulter l’état de votre configuration IKE avec les commandes su
 
 ---
 
-**Réponse :**  
+**Réponse :**  ![capture5](images/IKE-key.png)
 
 ---
 
