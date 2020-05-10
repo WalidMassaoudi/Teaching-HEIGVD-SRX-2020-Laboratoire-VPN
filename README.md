@@ -108,7 +108,8 @@ Un « protocol » différent de `up` indique la plupart du temps que l’interfa
 
 ---
 
-**Réponse :**  
+**Réponse :** Non. La configuration démarré est correcte. L'interface eth0/0 de RX1 est up ainsi que son protocole. 
+Les interfaces eth0/0 et eth0/1 sont up ainsi que leurs protocoles. 
 
 ---
 
@@ -145,7 +146,7 @@ Pour votre topologie il est utile de contrôler la connectivité entre :
 
 ---
 
-**Réponse :**  
+**Réponse :**  Oui, la configuration est correcte une fois VPC a eu une adresse IP.
 
 ---
 
@@ -168,7 +169,7 @@ Pour déclencher et pratiquer les captures vous allez « pinger » votre routeur
 
 ---
 
-**Screenshots :**  
+**Screenshots :**  ![screen3](images/pingVPC_R1_wireshar_R1Debug.png)
 
 ---
 
