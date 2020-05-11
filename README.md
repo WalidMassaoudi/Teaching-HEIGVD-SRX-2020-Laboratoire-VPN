@@ -277,6 +277,7 @@ Protection suite of priority 20
         Diffie-Hellman group:   #5 (1536 bit)
         lifetime:               1800 seconds, no volume limit
 ```
+
 ---
 
 
@@ -301,19 +302,6 @@ Keyring      Hostname/Address                            Preshared Key
 default      193.100.100.1                               cisco-1
 
 ```
-
-La commande affiche les Policy IKE. Le résultat obtenu correspond à nos configurations.
-
-Nos remarques : 
-
-- La première Policy de R2 ne sert à rien ici. On va utiliser la deuxième
-puisque, c’est elle qui correspond à la policy de R1.
-
-- MD5 est cassé.
-
-- Diffie-Hellman group 5 n’est pas recommandé, vaut mieux utiliser le group 14.
-
-
 ---
 
 ## Configuration IPsec
