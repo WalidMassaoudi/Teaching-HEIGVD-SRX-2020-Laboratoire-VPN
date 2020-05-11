@@ -448,6 +448,7 @@ Pensez à démarrer votre sniffer sur la sortie du routeur R2 vers internet avan
 ---
 
 **Réponse :**  
+ ![screenQ6](images/q6screen.png)
 
 ---
 
