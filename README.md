@@ -495,7 +495,7 @@ D'après la configuration effectué pour les routeurs RX1 et RX2, on a utilisé 
 
 **Réponse :**  
 Le mode utilisé dans ce laboratoire est le mode tunnel ,Comme on a vue dans le cours ,Il est le mode par default pour IPsec.
-Avec le mode tunnel, l'ensemble du paquet IP d'origine est protégé par IPSec.En plus la configuration est faite depuis un routeur vers un routeur ce que n'est pas le cas pour un  mode de transport PSec qui est  généralement utilisé pour les communications de bout en bout,par exemple, pour la communication entre un client et un serveur ou entre un poste de travail et une passerelle .
+Avec le mode tunnel, l'ensemble du paquet IP d'origine est protégé par IPSec.En plus la configuration est faite depuis un routeur vers un routeur ce que n'est pas le cas pour un  mode de transport PSec qui est  généralement utilisé pour les communications de bout en bout,par exemple, pour la communication entre un client et un serveur ou entre un poste de travail et une passerelle .Dans configuration des routeur aussi on a utilisé des proxy pour que le routeur  agit en tant que proxy pour les hôtes derrière lui. .
 
 ---
 
