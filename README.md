@@ -533,6 +533,6 @@ En peut remarquer aussi que le payload (ce qui présente le paquet original)du p
 
 ---
 
-**Réponse :**  
+**Réponse : l'entête ESP, l'entête IP originale, les données et le trailer ESP. C'est l'algorithme HMAC et SHA qui garantit l'authentification et l'integrité **  
 
 ---
