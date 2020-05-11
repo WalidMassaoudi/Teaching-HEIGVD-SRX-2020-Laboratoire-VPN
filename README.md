@@ -450,6 +450,10 @@ Pensez à démarrer votre sniffer sur la sortie du routeur R2 vers internet avan
 **Réponse :**  
  ![screenQ6](images/q6screen.png)
 
+Nos remarques:
+- Les paquets ISAKMP correspondent à la phase d'échange de clées entre les deux routeurs.
+- Les paquets ESP correspondent aux pings désormais chiffré et encapsulé.
+- Pour améliorer les perfomances, il vaudrait mieux augmenté les durées de vie (taille et temps).
 ---
 
 **Question 7: Reportez dans votre rapport une petite explication concernant les différents « timers » utilisés par IKE et IPsec dans cet exercice (recherche Web). :**
