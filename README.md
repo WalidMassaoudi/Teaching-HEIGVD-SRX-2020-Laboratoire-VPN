@@ -507,14 +507,14 @@ Le mode utilisé dans ce laboratoire est le mode tunnel ,Comme on a vue dans le 
 **Réponse : 
 
 En s'appuyant sur le principe de IPsec via mode tunnel vue au cours l'ensemble du paquet IP d'origine est protégé (chiffré) par IPSec, c'est à dire l'entete IP originale avec les données et le ESP Trailer(pading ,next header)  est chiffré grace à l'algorithme AES.
-
+````
 RX1#show crypto map
     ...
-        Mixed-mode : Disabled
         Transform sets={
-                STRONG:  { **esp-192-aes** esp-sha-hmac  } ,
+                STRONG:  { esp-192-aes esp-sha-hmac  } ,
         }
-  ...     
+  ...    
+  ```
 En peut remarquer aussi que le payload (ce qui présente le paquet original)du paquet est chiffré dans la capture wireshark dans la question 6.
 
 ---
