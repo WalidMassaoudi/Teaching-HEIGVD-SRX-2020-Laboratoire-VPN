@@ -253,11 +253,6 @@ Protection suite of priority 20
         authentication method:  Pre-Shared Key
         Diffie-Hellman group:   #5 (1536 bit)
         lifetime:               1800 seconds, no volume limit
-RX1(config)#do show crypto isakmp key
-Keyring      Hostname/Address                            Preshared Key
-
-default      193.200.200.1                               cisco-1
-
 ```
 R2 :
 ```
@@ -487,7 +482,9 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse : D'après la configuration effectué pour les routeurs RX1 et RX2, on a utilisé le protocole IKE (en utilisant ISAKMP pour la phase de négotiation des clés , et __cisco-1__ commre preshared key). Pour la phase d'authentification,intégrité, et chiffrement de données on a utilisé ESP (avec AES192  pour chiffrer) comme c'est montré sur la cpture Wireshark de la question 6.**
+**Réponse : 
+
+D'après la configuration effectué pour les routeurs RX1 et RX2, on a utilisé le protocole IKE (en utilisant ISAKMP pour la phase de négotiation des clés , et __cisco-1__ commre preshared key). Pour la phase d'authentification,intégrité, et chiffrement de données on a utilisé ESP (avec AES192  pour chiffrer) comme c'est montré sur la cpture Wireshark de la question 6.**
 
 ---
 
@@ -497,6 +494,8 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 ---
 
 **Réponse :**  
+Le mode utilisé dans ce laboratoire est le mode tunnel ,Comme on a vue dans le cours ,Il est le mode par default pour IPsec.
+Avec le mode tunnel, l'ensemble du paquet IP d'origine est protégé par IPSec.En plus la configuration est faite depuis un routeur vers un routeur ce que n'est pas le cas pour un  mode de transport PSec qui est  généralement utilisé pour les communications de bout en bout,par exemple, pour la communication entre un client et un serveur ou entre un poste de travail et une passerelle .
 
 ---
 
