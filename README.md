@@ -487,7 +487,7 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse : D'après la configuration effectué pour les routeurs RX1 et RX2, on a utilisé le protocole IKE (en utilisant ISAKMP pour la phase de négotiation des clés , et __cisco-1__ commre preshared key). Pour la phase d'authentification,intégrité, et chiffrement de données on a utilisé ESP (avec AES192  pour chiffrer  )**
 
 ---
 
