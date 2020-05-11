@@ -242,8 +242,23 @@ Vous pouvez consulter l’état de votre configuration IKE avec les commandes su
 ---
 
 **Réponse :** 
+R1:
+```
+RX1(config)#do show crypto isakmp policy
 
----
+Global IKE policy
+Protection suite of priority 20
+        encryption algorithm:   AES - Advanced Encryption Standard (256 bit keys        ).
+        hash algorithm:         Secure Hash Standard
+        authentication method:  Pre-Shared Key
+        Diffie-Hellman group:   #5 (1536 bit)
+        lifetime:               1800 seconds, no volume limit
+RX1(config)#do show crypto isakmp key
+Keyring      Hostname/Address                            Preshared Key
+
+default      193.200.200.1                               cisco-1
+
+```
 R2 :
 ```
 RX2(config)#do show crypto isakmp policy
@@ -262,29 +277,30 @@ Protection suite of priority 20
         Diffie-Hellman group:   #5 (1536 bit)
         lifetime:               1800 seconds, no volume limit
 ```
+---
+
+
+**Question 5: Utilisez la commande `show crypto isakmp key` et faites part de vos remarques :**
+
+---
+
+**Réponse :** 
 R1:
 ```
-RX1(config)#do show crypto isakmp policy
-
-Global IKE policy
-Protection suite of priority 20
-        encryption algorithm:   AES - Advanced Encryption Standard (256 bit keys        ).
-        hash algorithm:         Secure Hash Standard
-        authentication method:  Pre-Shared Key
-        Diffie-Hellman group:   #5 (1536 bit)
-        lifetime:               1800 seconds, no volume limit
 RX1(config)#do show crypto isakmp key
 Keyring      Hostname/Address                            Preshared Key
 
 default      193.200.200.1                               cisco-1
 
 ```
-**Question 5: Utilisez la commande `show crypto isakmp key` et faites part de vos remarques :**
+R2:
+```
+RX2(config)#do   show crypto isakmp key
+Keyring      Hostname/Address                            Preshared Key
 
----
+default      193.100.100.1                               cisco-1
 
-**Réponse :**  ![capture5](images/IKE-key.PNG)
-
+```
 ---
 
 ## Configuration IPsec
