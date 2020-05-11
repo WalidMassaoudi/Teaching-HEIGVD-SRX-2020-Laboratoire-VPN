@@ -495,7 +495,7 @@ D'après la configuration effectué pour les routeurs RX1 et RX2, on a utilisé 
 
 **Réponse :**  
 Le mode utilisé dans ce laboratoire est le mode tunnel ,Comme on a vue dans le cours ,Il est le mode par default pour IPsec.
-Avec le mode tunnel, l'ensemble du paquet IP d'origine est protégé par IPSec.En plus la configuration est faite depuis un routeur vers un routeur ce que n'est pas le cas pour un  mode de transport PSec qui est  généralement utilisé pour les communications de bout en bout,par exemple, pour la communication entre un client et un serveur ou entre un poste de travail et une passerelle .Dans configuration des routeur aussi on a utilisé des proxy pour que le routeur  agit en tant que proxy pour les hôtes derrière lui. .
+.En plus la configuration est faite depuis un routeur vers un routeur (avec mode tunnel)ce que n'est pas le cas pour un  mode de transport PSec qui est  généralement utilisé pour les communications de bout en bout,par exemple, pour la communication entre un client et un serveur ou entre un poste de travail et une passerelle .Dans configuration des routeur aussi on a utilisé des proxy pour que le routeur  agit en tant que proxy pour les hôtes derrière lui. .
 
 ---
 
@@ -504,7 +504,20 @@ Avec le mode tunnel, l'ensemble du paquet IP d'origine est protégé par IPSec.E
 
 ---
 
-**Réponse : Comme c'est le mode tunnel qui est utilisé, donc tout le paquet _icmp_ original a été encapsulé dans un paquet**  
+**Réponse : 
+
+En s'appuyant sur le principe de IPsec via mode tunnel vue au cours l'ensemble du paquet IP d'origine est protégé (chiffré) par IPSec, c'est à dire l'entete IP originale avec les données et le ESP Trailer(pading ,next header)  est chiffré grace à l'algorithme AES.
+```
+RX1#show crypto map
+Crypto Map IPv4 "MY-CRYPTO" 10 ipsec-isakmp
+    ...
+        Mixed-mode : Disabled
+        Transform sets={
+                STRONG:  { **esp-192-aes** esp-sha-hmac  } ,
+        }
+  ...
+      
+```
 
 ---
 
