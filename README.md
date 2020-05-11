@@ -431,28 +431,6 @@ Crypto Map IPv4 "MY-CRYPTO" 10 ipsec-isakmp
 
         Interfaces using crypto map NiStTeSt1:
 
-RX2#show crypto map
-Crypto Map IPv4 "MY-CRYPTO" 10 ipsec-isakmp
-        Peer = 193.100.100.1
-        Extended IP access list TO-CRYPT
-            access-list TO-CRYPT permit ip 172.17.1.0 0.0.0.255 172.16.1.0 0.0.0.255
-        Current peer: 193.100.100.1
-        Security association lifetime: 2560 kilobytes/300 seconds
-        Security association idletime: 900 seconds
-        Responder-Only (Y/N): N
-        PFS (Y/N): N
-        Mixed-mode : Disabled
-        Transform sets={
-                STRONG:  { esp-192-aes esp-sha-hmac  } ,
-        }
-        Interfaces using crypto map MY-CRYPTO:
-                Ethernet0/0
-
-        Interfaces using crypto map NiStTeSt1:
-
-RX2#
-
-
 ```
 
 Pour tester si votre VPN est correctement configuré vous pouvez maintenant lancer un « ping » sur la « loopback 1 » de votre routeur RX1 (172.16.1.1) depuis votre poste utilisateur (172.17.1.100). De manière à recevoir toutes les notifications possibles pour des paquets ICMP envoyés à un routeur comme RX1 vous pouvez activer un « debug » pour cela. La commande serait :
