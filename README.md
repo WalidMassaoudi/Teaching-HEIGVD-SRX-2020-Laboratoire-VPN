@@ -146,7 +146,7 @@ Pour votre topologie il est utile de contrôler la connectivité entre :
 
 ---
 
-**Réponse :**  Oui, la configuration est correcte une fois VPC a eu une adresse IP.
+**Réponse :**  Oui, la configuration est correcte, après que VPC prend une adresse ip.
 
 ---
 
