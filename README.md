@@ -484,7 +484,7 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 **Réponse : 
 
-D'après la configuration effectué pour les routeurs RX1 et RX2, on a utilisé le protocole IKE (en utilisant ISAKMP pour la phase de négotiation des clés , et __cisco-1__ commre preshared key). Pour la phase d'authentification,intégrité, et chiffrement de données on a utilisé ESP (avec AES192  pour chiffrer) comme c'est montré sur la cpture Wireshark de la question 6.**
+D'après la configuration effectué pour les routeurs RX1 et RX2, on a utilisé le protocole IKE (en utilisant ISAKMP pour la phase de négotiation des clés , et __cisco-1__ commre preshared key). Pour la phase d'authentification,intégrité, et chiffrement de données on a utilisé ESP (avec AES192  pour chiffrer) comme c'est montré sur la capture Wireshark de la question six .**
 
 ---
 
@@ -504,7 +504,7 @@ Avec le mode tunnel, l'ensemble du paquet IP d'origine est protégé par IPSec.E
 
 ---
 
-**Réponse :**  
+**Réponse : Comme c'est le mode tunnel qui est utilisé, donc tout le paquet _icmp_ original a été encapsulé dans un paquet**  
 
 ---
 
@@ -513,7 +513,7 @@ Avec le mode tunnel, l'ensemble du paquet IP d'origine est protégé par IPSec.E
 
 ---
 
-**Réponse :**  
+**Réponse : Comme on a vu en cours, le mode tunnel nous permet d'authenitifier la totalité du packet ce qui englobe les données , entête IP orig + des parties du nouvel entête IP.**  
 
 ---
 
