@@ -461,7 +461,20 @@ Nos remarques:
 ---
 
 **Réponse :**  
-
+```     
+Chaque clé est sensible à Brute Force.Si tout ce qu'on utilise est une seule clé et qu'un attaquant parvient à forcer notre seule clé,alors toutes
+les  données que nous  avons envoyées ou reçues sont compromises.Pour limiter la portée du compromis potentiel, IPsec effectue des opérations de "rekey",
+de sorte que si une force brute réussit, au mieux seulement pendant  8 heures de vos données sont compromises.  
+IKE : 
+    - lifetime : Spécifiez la durée de vie de l'association de sécurité - en secondes (la durée minimum recommendée est plus que 900 secondes).
+    - keepalive: Définir un intervalle nat keepalive à utiliser avec les homologues IOS ,le premier numéro indique le nombre de secondes entre  keep alives le deuxième (minimum 10 secondes), le deuxième est utilisé 
+                 pour calculer le nombre de secondes que le routeur doivent attendre avant que les IKE's se rénogocient .
+IPsec :
+    - lifetime : Un routeur CISCO permet actuellement la configuration des durées de vie des SA IPsec. Les durées de vie peuvent être configuré globalement
+               ou par carte cryptographique. Il existe deux durées de vie: une durée de vie «temporisée» et un durée de vie.«volume de trafic» Une association 
+               de sécurité expire après la première de ces durées de vie.
+    -idle-time : la durée pendant laquelle la connexion vpn est inactive, c'est-à-dire. aucune activité vue sur le tunnel, avant qu'il ne soit déconnecté.
+  ```
 ---
 
 
