@@ -524,7 +524,9 @@ En peut remarquer aussi que le payload (ce qui présente le paquet original)du p
 
 ---
 
-**Réponse : Comme on a vu en cours, le mode tunnel nous permet d'authenitifier la totalité du packet ce qui englobe les données , entête IP orig + des parties du nouvel entête IP. L'algorithme est HMAC avec SHA**  
+**Réponse :
+
+Comme on a vu en cours, le mode tunnel nous permet d'authenitifier la totalité du packet ce qui englobe les données , entête IP orig + des parties du nouvel entête IP. L'algorithme est HMAC avec SHA**  
 
 ---
 
@@ -533,6 +535,12 @@ En peut remarquer aussi que le payload (ce qui présente le paquet original)du p
 
 ---
 
-**Réponse : l'entête ESP, l'entête IP originale, les données et le trailer ESP. C'est l'algorithme HMAC et SHA qui garantit l'authentification et l'integrité **  
+**Réponse :
+
+la protection de l'intègrité du paquet concerne la totalité du paquet authentifié précédament dans la question 11 telle que l'entete IP du nouveau paquet n'est y pas compris.L'ICV (Integrity Check Value) est le résultat du processus d'intégrité,Cela implique normalement l'algorithme HMAC (Hash Message Authentication Code) et la fonction du hashage  SHA-1.on peut confirmer avec la sortie d la commande   show crypto map :
+```
+Transform sets={
+        STRONG:  { ... esp-sha-hmac  } ,
+}
 
 ---
