@@ -313,6 +313,8 @@ Keyring      Hostname/Address                            Preshared Key
 default      193.100.100.1                               cisco-1
 
 ```
+ L'utilisation de la même clé en clair dans les 2 routeurs n'est pas recommendé à notre avis.
+ 
 ---
 
 ## Configuration IPsec
