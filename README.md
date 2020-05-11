@@ -205,13 +205,14 @@ Sur le routeur R1 nous activons un « proposal » IKE. Il s’agit de la configu
 Les commandes de configurations sur R1 ressembleront à ce qui suit :
 
 ```
-crypto isakmp policy 20
-  encr aes 256
-  authentication pre-share
-  hash sha
-  group 5
-  lifetime 1800
-crypto isakmp key cisco-1 address 193.200.200.1 no-xauth
+crypto isakmp policy 20     * Définir une stratégie IKE et entrer dans  le mode de  configuration config-isakmp ,le numéro est unique ,il indentifie la politique du sécurité  *
+  encr aes 256              * Spécifie l'algorithme de chiffrement (sans spécification DES est utilisée par defaut).ici en utilise AES 256 bits.
+  authentication pre-share  * Spécifiez la méthode d'authentification: clés pré-partagées (preshare), nonces chiffrés RSA1 (rsa-encr) ou signatures RSA (rsa-slg). Cet exemple configure les clés pré-partagées. La valeur par défaut est les signatures RSA.*
+  hash sha                  * Spécifiez l'algorithme de hachage: Message Digest 5 (MD5 [md5]) ou Secure Hash Algorithm (SHA [sha]). Cet exemple configure SHA, qui est la valeur par défaut.*
+  group 5                   * Les groupes Diffie-Hellman (DH) déterminent la force de la clé utilisée dans le processus d'échange de clés. Des numéros de groupe plus élevés que 1024 sont plus sûrs ,ici c'est le groupe 5 donc 1536-bit*
+  lifetime 1800             * Spécifiez la durée de vie de l'association de sécurité - en secondes (la durée minimum recommendée est plus que 900 secondes)*
+crypto isakmp key cisco-1 address 193.200.200.1 no-xauth * Spécifie au niveau du pair local la clé partagée à utiliser avec un pair distant particulier.Puisque  l'homologue distant a spécifié son identité ISAKMP avec une adresse,on va utiliser le mot clé address, sinon on utilise le mot-clé hostname .no-xauth - Empêche le routeur de demander au pair des informations Xauth. *
+
 crypto isakmp keepalive 30 3
 ```
 
