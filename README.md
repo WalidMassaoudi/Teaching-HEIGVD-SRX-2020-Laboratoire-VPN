@@ -513,7 +513,7 @@ Avec le mode tunnel, l'ensemble du paquet IP d'origine est protégé par IPSec.E
 
 ---
 
-**Réponse : Comme on a vu en cours, le mode tunnel nous permet d'authenitifier la totalité du packet ce qui englobe les données , entête IP orig + des parties du nouvel entête IP.**  
+**Réponse : Comme on a vu en cours, le mode tunnel nous permet d'authenitifier la totalité du packet ce qui englobe les données , entête IP orig + des parties du nouvel entête IP. L'algorithme est HMAC avec SHA**  
 
 ---
 
